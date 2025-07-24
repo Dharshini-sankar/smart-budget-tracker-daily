@@ -1,0 +1,188 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 240 18% 97%;
+    --foreground: 222 84% 4.9%;
+
+    /* Finance-focused primary colors */
+    --primary: 214 85% 20%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 214 100% 35%;
+
+    /* Success/Income colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 95%;
+
+    /* Warning/Savings colors */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 45 93% 95%;
+
+    /* Expense/Destructive colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --destructive-light: 0 84% 95%;
+
+    /* Card and surface colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+    --card-hover: 210 40% 98%;
+
+    /* Secondary elements */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    /* Muted elements */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent elements */
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    /* UI elements */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 214 85% 20%;
+
+    /* Gradients for finance UI */
+    --gradient-primary: linear-gradient(135deg, hsl(214 85% 20%), hsl(214 100% 35%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 50%));
+    --gradient-warning: linear-gradient(135deg, hsl(45 93% 47%), hsl(45 93% 60%));
+    --gradient-background: linear-gradient(135deg, hsl(240 18% 97%), hsl(210 40% 98%));
+
+    /* Shadows */
+    --shadow-primary: 0 4px 20px hsl(214 85% 20% / 0.15);
+    --shadow-success: 0 4px 20px hsl(142 76% 36% / 0.15);
+    --shadow-card: 0 2px 10px hsl(222 84% 4.9% / 0.1);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Base colors */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    /* Finance-focused primary colors */
+    --primary: 214 100% 70%;
+    --primary-foreground: 222 84% 5%;
+    --primary-glow: 214 100% 80%;
+
+    /* Success/Income colors */
+    --success: 142 76% 50%;
+    --success-foreground: 222 84% 5%;
+    --success-light: 142 76% 10%;
+
+    /* Warning/Savings colors */
+    --warning: 45 93% 60%;
+    --warning-foreground: 222 84% 5%;
+    --warning-light: 45 93% 10%;
+
+    /* Expense/Destructive colors */
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 222 84% 5%;
+    --destructive-light: 0 84% 10%;
+
+    /* Card and surface colors */
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+    --card-hover: 217 33% 20%;
+
+    /* Secondary elements */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted elements */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent elements */
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    /* UI elements */
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 214 100% 70%;
+
+    /* Gradients for finance UI */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 70%), hsl(214 100% 80%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 50%), hsl(142 76% 60%));
+    --gradient-warning: linear-gradient(135deg, hsl(45 93% 60%), hsl(45 93% 70%));
+    --gradient-background: linear-gradient(135deg, hsl(222 84% 5%), hsl(217 33% 17%));
+
+    /* Shadows */
+    --shadow-primary: 0 4px 20px hsl(214 100% 70% / 0.25);
+    --shadow-success: 0 4px 20px hsl(142 76% 50% / 0.25);
+    --shadow-card: 0 2px 10px hsl(0 0% 0% / 0.5);
+
+    /* Sidebar */
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Enhanced animations for the landing page */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from { box-shadow: 0 0 20px hsl(214 85% 20% / 0.2); }
+    to { box-shadow: 0 0 30px hsl(214 85% 20% / 0.4); }
+  }
+}
